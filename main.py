@@ -53,7 +53,7 @@ def main(_):
           output_width=FLAGS.output_width,
           output_height=FLAGS.output_height,
           batch_size=FLAGS.batch_size,
-          y_dim=10,
+          # y_dim=10,
           c_dim=1,
           dataset_name=FLAGS.dataset,
           input_fname_pattern=FLAGS.input_fname_pattern,
@@ -80,7 +80,7 @@ def main(_):
     else:
       if not dcgan.load(FLAGS.checkpoint_dir):
         raise Exception("[!] Train a model first, then run test mode")
-      
+
 
     # to_json("./web/js/layers.js", [dcgan.h0_w, dcgan.h0_b, dcgan.g_bn0],
     #                 [dcgan.h1_w, dcgan.h1_b, dcgan.g_bn1],
